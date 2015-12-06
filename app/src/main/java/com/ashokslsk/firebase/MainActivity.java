@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Firebase.setAndroidContext(this);
         fireData = (TextView) findViewById(R.id.firedata);
         mRef = new Firebase("https://dazzling-inferno-6462.firebaseio.com/condition");
+
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
